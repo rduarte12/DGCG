@@ -202,7 +202,7 @@ def compute_coef_for_threshold(correlation_matrix, ranked_lists, threshold, k_gr
     num_edges= 0
 
     for i in range(n_samples):
-        for j in range(1, k_graph):
+        for j in range(k_graph):
             neighbor_idx= ranked_lists[i][j]
             
             if correlation_matrix[i, neighbor_idx] > threshold:
