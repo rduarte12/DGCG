@@ -24,11 +24,11 @@ class SGC(torch.nn.Module):
 
 
 class GCNClassifier:
-    def __init__(self, gcn_type, rks, pN, number_neighbors=80):
+    def __init__(self, gcn_type, rks, pN, number_neighbors=80, learning_rate):
         self.pK = number_neighbors
         self.pN = pN
         self.rks = rks
-        self.pLR = 0.001
+        self.pLR = learning_rate
         self.pNNeurons = 32
         self.pNEpochs = 200
         self.gcn_type = gcn_type
