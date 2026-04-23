@@ -44,7 +44,7 @@ def main():
         print(f"\nUsando limiar manual: {threshold_to_use}")
     
     folds= create_folds(features, labels, n_folds= config.N_folds)
-    clf= GCNClassifier('gcn-net', ranked_lists, len(labels), number_neighbors=config.k_graph)
+    clf= GCNClassifier('gcn-net', ranked_lists, len(labels), number_neighbors=config.k_graph, learning_rate = config.learning_rate)
     fold_acuracies= []
 
     for fold_idx, (test_idx, train_idx) in enumerate(folds):
